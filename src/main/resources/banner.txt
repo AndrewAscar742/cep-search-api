@@ -1,0 +1,19 @@
+   ______ __________     _____                      __       ___    ____  ____
+  / ____// ____/ __ \   / ___/ ___   ____ _ _____ / /_     /   |  / __ \/  _/
+ / /    / __/ / /_/ /   \__ \ / _ \ / __ `// ___// __ \   / /| | / /_/ // /  
+/ /___ / /___/ ____/   ___/ //  __// /_/ // /   / /_/ /  / ___ |/ ____// /   
+\____//_____/_/       /____/ \___/ \__,_//_/   /_.___/  /_/  |_/_/   /___/   
+
+===============================================================================
+ Application : @project.name@
+ Description : @project.description@
+ Version     : @project.version@
+ Group ID    : @project.groupId@
+ Artifact ID : @project.artifactId@
+ Java        : @java.version@
+ Encoding    : @project.build.sourceEncoding@
+-------------------------------------------------------------------------------
+ Profiles:
+   local -> WireMock + PostgreSQL Docker
+   prod  -> ViaCEP + PostgreSQL Docker
+===============================================================================
