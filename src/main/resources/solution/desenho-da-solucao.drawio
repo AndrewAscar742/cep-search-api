@@ -105,11 +105,74 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="W9QPsahp25-4rGI5WbHx" name="Página-2">
-    <mxGraphModel dx="1665" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram id="W9QPsahp25-4rGI5WbHx" name="Dockerfile">
+    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-1" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Dockerfile Multi-Stage: cep-search-api" vertex="1">
+          <mxGeometry height="610" width="690" x="80" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-2" edge="1" parent="u5tDRm-XoD2-n-BMiF3I-1" source="u5tDRm-XoD2-n-BMiF3I-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;flowAnimation=1;shadow=1;" target="u5tDRm-XoD2-n-BMiF3I-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-3" parent="u5tDRm-XoD2-n-BMiF3I-1" style="rounded=0;whiteSpace=wrap;html=1;" value="eclipse-temurin-21-jdk" vertex="1">
+          <mxGeometry height="60" width="150" x="50" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-4" parent="u5tDRm-XoD2-n-BMiF3I-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="IMAGE BASE: STAGE 1" vertex="1">
+          <mxGeometry height="30" width="240" x="10" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-5" edge="1" parent="u5tDRm-XoD2-n-BMiF3I-1" source="u5tDRm-XoD2-n-BMiF3I-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;flowAnimation=1;shadow=1;" target="u5tDRm-XoD2-n-BMiF3I-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-6" parent="u5tDRm-XoD2-n-BMiF3I-1" style="rounded=0;whiteSpace=wrap;html=1;" value="Criação de pasta" vertex="1">
+          <mxGeometry height="60" width="150" x="50" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-7" edge="1" parent="u5tDRm-XoD2-n-BMiF3I-1" source="u5tDRm-XoD2-n-BMiF3I-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;flowAnimation=1;shadow=1;" target="u5tDRm-XoD2-n-BMiF3I-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-8" parent="u5tDRm-XoD2-n-BMiF3I-1" style="rounded=0;whiteSpace=wrap;html=1;" value="Atualização de pacotes e instalação maven" vertex="1">
+          <mxGeometry height="60" width="150" x="50" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-9" edge="1" parent="u5tDRm-XoD2-n-BMiF3I-1" source="u5tDRm-XoD2-n-BMiF3I-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;flowAnimation=1;shadow=1;" target="u5tDRm-XoD2-n-BMiF3I-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-10" parent="u5tDRm-XoD2-n-BMiF3I-1" style="rounded=0;whiteSpace=wrap;html=1;" value="Copia pom.xml e source do projeto(src)" vertex="1">
+          <mxGeometry height="60" width="150" x="50" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-11" parent="u5tDRm-XoD2-n-BMiF3I-1" style="rounded=0;whiteSpace=wrap;html=1;" value="mvn clean package" vertex="1">
+          <mxGeometry height="60" width="150" x="50" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-12" parent="u5tDRm-XoD2-n-BMiF3I-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="IMAGE BASE: STAGE 2" vertex="1">
+          <mxGeometry height="30" width="240" x="410" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-13" edge="1" parent="u5tDRm-XoD2-n-BMiF3I-1" source="u5tDRm-XoD2-n-BMiF3I-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;flowAnimation=1;shadow=1;" target="u5tDRm-XoD2-n-BMiF3I-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-14" parent="u5tDRm-XoD2-n-BMiF3I-1" style="rounded=0;whiteSpace=wrap;html=1;" value="eclipse-temurin-21-jre" vertex="1">
+          <mxGeometry height="60" width="150" x="455" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-15" edge="1" parent="u5tDRm-XoD2-n-BMiF3I-1" source="u5tDRm-XoD2-n-BMiF3I-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;flowAnimation=1;shadow=1;" target="u5tDRm-XoD2-n-BMiF3I-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-16" parent="u5tDRm-XoD2-n-BMiF3I-1" style="rounded=0;whiteSpace=wrap;html=1;" value="Criação de pasta" vertex="1">
+          <mxGeometry height="60" width="150" x="455" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-17" edge="1" parent="u5tDRm-XoD2-n-BMiF3I-1" source="u5tDRm-XoD2-n-BMiF3I-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;flowAnimation=1;shadow=1;" target="u5tDRm-XoD2-n-BMiF3I-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-18" parent="u5tDRm-XoD2-n-BMiF3I-1" style="rounded=0;whiteSpace=wrap;html=1;" value="Copia o pacote jar gerado pelo stage 1" vertex="1">
+          <mxGeometry height="60" width="150" x="455" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-19" edge="1" parent="u5tDRm-XoD2-n-BMiF3I-1" source="u5tDRm-XoD2-n-BMiF3I-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;flowAnimation=1;shadow=1;" target="u5tDRm-XoD2-n-BMiF3I-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-20" parent="u5tDRm-XoD2-n-BMiF3I-1" style="rounded=0;whiteSpace=wrap;html=1;" value="Expõe porta do container" vertex="1">
+          <mxGeometry height="60" width="150" x="455" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="u5tDRm-XoD2-n-BMiF3I-21" parent="u5tDRm-XoD2-n-BMiF3I-1" style="rounded=0;whiteSpace=wrap;html=1;" value="definir comando principal ao starup do container" vertex="1">
+          <mxGeometry height="60" width="150" x="455" y="540" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
