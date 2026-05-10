@@ -6,7 +6,7 @@ import br.com.sp.nava.cep.search.api.dto.out.ViaCepResponseDto;
 public interface EnderecoService {
 	EnderecoResponseDto buscarPorCep(String cep);
 
-	boolean validarCepNaBase(String cep);
+	void validarCepNaBase(String cep);
 
 	EnderecoResponseDto inserirCep(ViaCepResponseDto enderecoViaCepResponse);
 

@@ -19,32 +19,30 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping(path = "/v1/enderecos")
 public class EnderecoController {
-	
-    private final EnderecoService enderecoService;
 
-    public EnderecoController(EnderecoService enderecoService) {
-        this.enderecoService = enderecoService;
-    }
+	private final EnderecoService enderecoService;
 
-    @GetMapping(path = "/{cep}")
-    public ResponseEntity<EnderecoResponseDto> buscarPorCep(@PathVariable String cep) {
-        return ResponseEntity.ok(enderecoService.buscarPorCep(cep));
-    }
-    
-    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Object> buscarPorCep(@RequestBody @Valid InputEnderecoDto enderecoDto) {
-       boolean isCepRegistered = enderecoService.validarCepNaBase(enderecoDto.cep());
-       
-       System.out.println(isCepRegistered);
-       
-       if (isCepRegistered) {
-    	   return ResponseEntity.badRequest().body("O CEP passado já está cadastrado");
-       }
-       
-       ViaCepResponseDto enderecoViaCepResponse = enderecoService.buscarPorCepGateway(enderecoDto.cep());
-       
-       EnderecoResponseDto enderecoResponseDto = enderecoService.inserirCep(enderecoViaCepResponse);
-       
-       return ResponseEntity.status(HttpStatus.CREATED).body(enderecoResponseDto);
-    }
+	public EnderecoController(EnderecoService enderecoService) {
+		this.enderecoService = enderecoService;
+	}
+
+	@GetMapping(path = "/{cep}")
+	public ResponseEntity<EnderecoResponseDto> buscarPorCep(@PathVariable String cep) {
+		return ResponseEntity.ok(enderecoService.buscarPorCep(cep));
+	}
+
+	@PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Object> buscarPorCep(@RequestBody @Valid InputEnderecoDto enderecoDto) {
+		// valida se o cep já existe no banco
+		enderecoService.validarCepNaBase(enderecoDto.cep());
+		
+		// busca o cep na api via cep
+		ViaCepResponseDto enderecoViaCepResponse = enderecoService.buscarPorCepGateway(enderecoDto.cep());
+		
+		//inserção no banco
+		EnderecoResponseDto enderecoResponseDto = enderecoService.inserirCep(enderecoViaCepResponse);
+		
+		//retorno
+		return ResponseEntity.status(HttpStatus.CREATED).body(enderecoResponseDto);
+	}
 }

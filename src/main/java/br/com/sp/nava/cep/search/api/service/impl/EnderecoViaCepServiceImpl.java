@@ -1,7 +1,6 @@
 package br.com.sp.nava.cep.search.api.service.impl;
 
 import java.time.LocalDateTime;
-import java.util.Optional;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -14,6 +13,7 @@ import br.com.sp.nava.cep.search.api.dto.out.EnderecoResponseDto;
 import br.com.sp.nava.cep.search.api.dto.out.ViaCepResponseDto;
 import br.com.sp.nava.cep.search.api.repository.EnderecoRepository;
 import br.com.sp.nava.cep.search.api.service.EnderecoService;
+import br.com.sp.nava.cep.search.api.service.exceptions.CepJaCadastradoException;
 import br.com.sp.nava.cep.search.api.service.gateway.EnderecoViaCepGateway;
 import jakarta.persistence.EntityNotFoundException;
 
@@ -48,11 +48,10 @@ public class EnderecoViaCepServiceImpl implements EnderecoService {
 
 	@Transactional(isolation = Isolation.READ_COMMITTED, readOnly = true, propagation = Propagation.REQUIRED)
 	@Override
-	public boolean validarCepNaBase(String cep) {
-		Optional<EnderecoEntity> endereco = enderecoRepository.findByCep(cep);
-
-		return endereco.isPresent() ? true : false;
-
+	public void validarCepNaBase(String cep) {
+		enderecoRepository.findByCep(cep).ifPresent(endereco -> {
+			throw new CepJaCadastradoException("O CEP informado já está cadastrado.");
+		});
 	}
 
 	@Transactional(isolation = Isolation.READ_COMMITTED, readOnly = false, propagation = Propagation.REQUIRED)

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestClientResponseException;
 
+import br.com.sp.nava.cep.search.api.service.exceptions.CepJaCadastradoException;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -22,6 +23,8 @@ import jakarta.servlet.http.HttpServletRequest;
 public class TratadorGlobalDeExcecoes {
 
 	private static final URI TIPO_ERRO_VALIDACAO = URI.create("urn:cep-search-api:erro-validacao");
+
+	private static final URI TIPO_CEP_JA_CADASTRADO = URI.create("urn:cep-search-api:cep-ja-cadastrado");
 
 	private static final URI TIPO_RECURSO_NAO_ENCONTRADO = URI.create("urn:cep-search-api:recurso-nao-encontrado");
 
@@ -47,6 +50,19 @@ public class TratadorGlobalDeExcecoes {
 		problema.setProperty("timestamp", LocalDateTime.now());
 
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(problema);
+	}
+
+	@ExceptionHandler(CepJaCadastradoException.class)
+	public ResponseEntity<ProblemDetail> tratarCepJaCadastrado(CepJaCadastradoException excecao,
+			HttpServletRequest requisicao) {
+		ProblemDetail problema = ProblemDetail.forStatusAndDetail(HttpStatus.CONFLICT, excecao.getMessage());
+
+		problema.setTitle("CEP já cadastrado");
+		problema.setType(TIPO_CEP_JA_CADASTRADO);
+		problema.setInstance(URI.create(requisicao.getRequestURI()));
+		problema.setProperty("timestamp", LocalDateTime.now());
+
+		return ResponseEntity.status(HttpStatus.CONFLICT).body(problema);
 	}
 
 	@ExceptionHandler(MethodArgumentNotValidException.class)
