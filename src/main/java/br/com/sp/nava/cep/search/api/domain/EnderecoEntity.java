@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.UUID;
 
+import br.com.sp.nava.cep.search.api.dto.out.ViaCepResponseDto;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -74,6 +75,25 @@ public class EnderecoEntity {
     public EnderecoEntity() {
 		// Constructor default JPA
 	}
+
+    public EnderecoEntity(ViaCepResponseDto enderecoDto) {
+    	this.id = UUID.randomUUID();
+        this.cep = enderecoDto.cep();
+        this.logradouro = enderecoDto.logradouro();
+        this.complemento = enderecoDto.complemento();
+        this.unidade = enderecoDto.unidade();
+        this.bairro = enderecoDto.bairro();
+        this.localidade = enderecoDto.localidade();
+        this.uf = enderecoDto.uf();
+        this.estado = enderecoDto.estado();
+        this.regiao = enderecoDto.regiao();
+        this.ibge = enderecoDto.ibge();
+        this.gia = enderecoDto.gia();
+        this.ddd = enderecoDto.ddd();
+        this.siafi = enderecoDto.siafi();
+        this.dataRegistro = LocalDateTime.now();
+        this.ultimaConsulta = LocalDateTime.now();
+    }
 
 	public UUID getId() {
 		return id;

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.sp.nava.cep.search.api.dto.in.InputEnderecoDto;
 import br.com.sp.nava.cep.search.api.dto.out.EnderecoResponseDto;
+import br.com.sp.nava.cep.search.api.dto.out.ViaCepResponseDto;
 import br.com.sp.nava.cep.search.api.service.EnderecoService;
 import jakarta.validation.Valid;
 
@@ -38,9 +39,9 @@ public class EnderecoController {
     	   return ResponseEntity.badRequest().body("O CEP passado já está cadastrado");
        }
        
-       EnderecoResponseDto endereco = enderecoService.buscarPorCep(enderecoDto.cep());
+       ViaCepResponseDto enderecoViaCepResponse = enderecoService.buscarPorCepGateway(enderecoDto.cep());
        
-       EnderecoResponseDto enderecoResponseDto = enderecoService.inserirCep(endereco);
+       EnderecoResponseDto enderecoResponseDto = enderecoService.inserirCep(enderecoViaCepResponse);
        
        return ResponseEntity.status(HttpStatus.CREATED).body(enderecoResponseDto);
     }

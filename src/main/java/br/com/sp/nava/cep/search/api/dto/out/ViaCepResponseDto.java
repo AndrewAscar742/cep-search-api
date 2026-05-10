@@ -1,0 +1,29 @@
+package br.com.sp.nava.cep.search.api.dto.out;
+
+public record ViaCepResponseDto(
+		String cep,
+
+		String logradouro,
+
+		String complemento,
+
+		String unidade,
+
+		String bairro,
+
+		String localidade,
+
+		String uf,
+
+		String estado,
+
+		String regiao,
+
+		String ibge,
+
+		String gia,
+
+		String ddd,
+
+		String siafi) {
+}

@@ -12,6 +12,7 @@ import org.springframework.web.client.RestClient;
 
 import br.com.sp.nava.cep.search.api.domain.EnderecoEntity;
 import br.com.sp.nava.cep.search.api.dto.out.EnderecoResponseDto;
+import br.com.sp.nava.cep.search.api.dto.out.ViaCepResponseDto;
 import br.com.sp.nava.cep.search.api.repository.EnderecoRepository;
 import br.com.sp.nava.cep.search.api.service.EnderecoService;
 import br.com.sp.nava.cep.search.api.service.gateway.EnderecoViaCepGateway;
@@ -40,6 +41,11 @@ public class EnderecoViaCepServiceImpl implements EnderecoService {
 		
 		return convertToDto(enderecoEntity);
 	}
+	
+	@Override
+	public ViaCepResponseDto buscarPorCepGateway(String cep) {
+		return viaCepGateway.buscarPorCep(cep);
+	}
 
 	@Transactional(isolation = Isolation.READ_COMMITTED, readOnly = true, propagation = Propagation.REQUIRED)
 	@Override
@@ -52,11 +58,12 @@ public class EnderecoViaCepServiceImpl implements EnderecoService {
 
 	@Transactional(isolation = Isolation.READ_COMMITTED, readOnly = false, propagation = Propagation.REQUIRED)
 	@Override
-	public EnderecoResponseDto inserirCep(EnderecoResponseDto enderecoDto) {
+	public EnderecoResponseDto inserirCep(ViaCepResponseDto enderecoDto) {
 		EnderecoEntity endereco = new EnderecoEntity(enderecoDto);
 
 		enderecoRepository.save(endereco);
-		return null;
+		
+		return convertToDto(endereco);
 	}
 
 	private EnderecoResponseDto convertToDto(EnderecoEntity entity) {

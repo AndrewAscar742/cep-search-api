@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
-import br.com.sp.nava.cep.search.api.dto.out.EnderecoResponseDto;
+import br.com.sp.nava.cep.search.api.dto.out.ViaCepResponseDto;
 
 @Service
 @Profile("prd")
@@ -17,10 +17,10 @@ public class EnderecoViaCepGateway {
 		this.restClient = restClient;
 	}
 	
-    public EnderecoResponseDto buscarPorCep(String cep) {
+    public ViaCepResponseDto buscarPorCep(String cep) {
         return restClient.get()
                 .uri("/ws/{cep}/json", cep)
                 .retrieve()
-                .body(EnderecoResponseDto.class);
+                .body(ViaCepResponseDto.class);
     }
 }
