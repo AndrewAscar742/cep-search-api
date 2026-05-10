@@ -27,7 +27,7 @@ public class EnderecoEntity {
     @Column(name = "id", nullable = false, updatable = false)
     private UUID id;
 
-    @Column(name = "cep", nullable = false, unique = true, length = 9)
+    @Column(name = "cep", nullable = false, unique = true, length = 8)
     private String cep;
 
     @Column(name = "logradouro", length = 255)
@@ -78,7 +78,7 @@ public class EnderecoEntity {
 
     public EnderecoEntity(ViaCepResponseDto enderecoDto) {
     	this.id = UUID.randomUUID();
-        this.cep = enderecoDto.cep();
+        this.cep = normalizarCep(enderecoDto.cep());
         this.logradouro = enderecoDto.logradouro();
         this.complemento = enderecoDto.complemento();
         this.unidade = enderecoDto.unidade();
@@ -94,6 +94,15 @@ public class EnderecoEntity {
         this.dataRegistro = LocalDateTime.now();
         this.ultimaConsulta = LocalDateTime.now();
     }
+    
+    //Helpers
+    
+    //nesse regex eu tiro tudo que é número
+    private String normalizarCep(String cep) {
+        return cep == null ? null : cep.replaceAll("\\D", "");
+    }
+    
+    //Getters e Setters
 
 	public UUID getId() {
 		return id;

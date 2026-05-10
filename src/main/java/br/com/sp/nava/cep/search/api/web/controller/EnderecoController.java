@@ -35,6 +35,8 @@ public class EnderecoController {
     public ResponseEntity<Object> buscarPorCep(@RequestBody @Valid InputEnderecoDto enderecoDto) {
        boolean isCepRegistered = enderecoService.validarCepNaBase(enderecoDto.cep());
        
+       System.out.println(isCepRegistered);
+       
        if (isCepRegistered) {
     	   return ResponseEntity.badRequest().body("O CEP passado já está cadastrado");
        }
