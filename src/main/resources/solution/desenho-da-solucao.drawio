@@ -177,7 +177,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="iwVWfw-TyQE1J7wZ3BJF" name="Modelagem Lógica">
-    <mxGraphModel dx="1426" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1453" dy="862" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -189,7 +189,7 @@
         <mxCell id="PMrOTOohwnngG6CmKMWB-2" parent="PMrOTOohwnngG6CmKMWB-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="id - UUID PK" vertex="1">
           <mxGeometry height="30" width="270" y="30" as="geometry" />
         </mxCell>
-        <mxCell id="PMrOTOohwnngG6CmKMWB-3" parent="PMrOTOohwnngG6CmKMWB-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="cep VARCHAR(9) NOT NULL UNIQUE" vertex="1">
+        <mxCell id="PMrOTOohwnngG6CmKMWB-3" parent="PMrOTOohwnngG6CmKMWB-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="cep VARCHAR(8) NOT NULL UNIQUE" vertex="1">
           <mxGeometry height="30" width="270" y="60" as="geometry" />
         </mxCell>
         <mxCell id="PMrOTOohwnngG6CmKMWB-4" parent="PMrOTOohwnngG6CmKMWB-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="logradouro VARCHAR(255)" vertex="1">
