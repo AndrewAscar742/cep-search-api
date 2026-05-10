@@ -4,6 +4,8 @@ import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface EnderecoRepository extends JpaRepository<EnderecoRepository, UUID>{
+import br.com.sp.nava.cep.search.api.domain.EnderecoEntity;
+
+public interface EnderecoRepository extends JpaRepository<EnderecoEntity, UUID>{
 
 }
