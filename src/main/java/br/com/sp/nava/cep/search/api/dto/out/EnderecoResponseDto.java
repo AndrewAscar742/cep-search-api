@@ -1,6 +1,9 @@
 package br.com.sp.nava.cep.search.api.dto.out;
 
+import java.time.LocalDateTime;
+
 public record EnderecoResponseDto(
+		String id,
         String cep,
         String logradouro,
         String complemento,
@@ -10,6 +13,10 @@ public record EnderecoResponseDto(
         String ibge,
         String gia,
         String ddd,
-        String siafi
+        String siafi,
+        LocalDateTime dataRegistro,
+        LocalDateTime ultimaAtualizacao
 ) {
+	
+	
 }
