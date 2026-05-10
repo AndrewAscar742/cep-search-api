@@ -30,6 +30,7 @@ public class EnderecoViaCepServiceImpl implements EnderecoService {
 		this.viaCepGateway = viaCepGateway;
 	}
 
+	@Transactional(isolation = Isolation.READ_COMMITTED, readOnly = false, propagation = Propagation.REQUIRED)
 	@Override
 	public EnderecoResponseDto buscarPorCep(String cep) {
 		EnderecoEntity enderecoEntity = enderecoRepository.findByCep(cep)
