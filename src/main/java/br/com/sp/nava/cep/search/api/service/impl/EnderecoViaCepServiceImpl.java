@@ -2,7 +2,6 @@ package br.com.sp.nava.cep.search.api.service.impl;
 
 import java.time.LocalDateTime;
 
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
@@ -18,7 +17,6 @@ import br.com.sp.nava.cep.search.api.service.gateway.EnderecoViaCepGateway;
 import jakarta.persistence.EntityNotFoundException;
 
 @Service
-@Profile("prd")
 public class EnderecoViaCepServiceImpl implements EnderecoService {
 
 	private final EnderecoRepository enderecoRepository;

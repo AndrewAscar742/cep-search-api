@@ -1,13 +1,11 @@
 package br.com.sp.nava.cep.search.api.service.gateway;
 
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
 import br.com.sp.nava.cep.search.api.dto.out.ViaCepResponseDto;
 
 @Service
-@Profile("prd")
 public class EnderecoViaCepGateway {
 	
 	private final RestClient restClient;
