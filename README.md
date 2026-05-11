@@ -23,8 +23,7 @@ A aplicação também persiste os endereços consultados em uma base PostgreSQL 
 - WireMock
 - SpringDoc OpenAPI / Swagger UI
 - Actuator
-- Maven
-- JaCoCo
+- Maven 3.9.11
 
 ---
 
