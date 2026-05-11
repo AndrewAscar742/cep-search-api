@@ -39,14 +39,12 @@ services:
       - "8080:8080"
     environment:
       SPRING_PROFILES_ACTIVE: dsv
-
-      # PostgreSQL dentro da rede Docker
       DATABASE_URL: jdbc:postgresql://postgres-16:5432/cep_service_db
       DATABASE_USER: admin
       DATABASE_PASSWORD: admin
-
-      # WireMock dentro da rede Docker
       VIACEP_BASE_URL: http://wiremock:8080
+      VIACEP_CONNECT_TIMEOUT_MS: 5000
+      VIACEP_READ_TIMEOUT_MS: 30000
     depends_on:
       - postgres-16
       - wiremock
