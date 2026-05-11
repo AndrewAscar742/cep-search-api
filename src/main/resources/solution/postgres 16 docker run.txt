@@ -1,1 +1,0 @@
-docker run --name postgres-16 -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=cep_service_db -p 5433:5432 -v postgres_data:/var/lib/postgresql/data -d postgres:16
