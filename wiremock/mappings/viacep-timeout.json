@@ -1,0 +1,26 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "urlPath": "/ws/40800000/json"
+  },
+  "response": {
+    "status": 200,
+    "fixedDelayMilliseconds": 10000,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "cep": "40800-000",
+      "logradouro": "Rua Simulada com Timeout",
+      "complemento": "",
+      "bairro": "Timeout",
+      "localidade": "Salvador",
+      "uf": "BA",
+      "ibge": "2927408",
+      "gia": "",
+      "ddd": "71",
+      "siafi": "3849"
+    }
+  }
+}
