@@ -17,12 +17,12 @@ import br.com.sp.nava.cep.search.api.service.gateway.EnderecoViaCepGateway;
 import jakarta.persistence.EntityNotFoundException;
 
 @Service
-public class EnderecoViaCepServiceImpl implements EnderecoService {
+public class EnderecoServiceImpl implements EnderecoService {
 
 	private final EnderecoRepository enderecoRepository;
 	private final EnderecoViaCepGateway viaCepGateway;
 
-	public EnderecoViaCepServiceImpl(EnderecoRepository enderecoRepository, EnderecoViaCepGateway viaCepGateway) {
+	public EnderecoServiceImpl(EnderecoRepository enderecoRepository, EnderecoViaCepGateway viaCepGateway) {
 		super();
 		this.enderecoRepository = enderecoRepository;
 		this.viaCepGateway = viaCepGateway;
