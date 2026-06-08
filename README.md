@@ -315,9 +315,9 @@ Após subir o `docker-compose.dsv.yml`, os serviços ficam disponíveis no host 
 
 | Serviço | URL |
 |---|---|
-| API | `http://localhost:8080` |
-| Swagger UI | `http://localhost:8080/swagger-ui/index.html` |
-| Actuator Health | `http://localhost:8080/actuator/health` |
+| API | `http://localhost:8080/cep-search-api` |
+| Swagger UI | `http://localhost:8080/cep-search-api/swagger-ui/index.html` |
+| Actuator Health | `http://localhost:8080/cep-search-api/actuator/health` |
 | WireMock Admin | `http://localhost:8081/__admin/mappings` |
 | PostgreSQL | `localhost:5433` |
 
