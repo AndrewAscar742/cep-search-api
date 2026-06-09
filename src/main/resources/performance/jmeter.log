@@ -1,0 +1,40 @@
+2026-06-08 16:37:15,003 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2026-06-08 16:37:15,013 INFO o.a.j.JMeter: Loading user properties from: C:\tools\apache-jmeter-5.6.3\apache-jmeter-5.6.3\bin\user.properties
+2026-06-08 16:37:15,013 INFO o.a.j.JMeter: Loading system properties from: C:\tools\apache-jmeter-5.6.3\apache-jmeter-5.6.3\bin\system.properties
+2026-06-08 16:37:15,017 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2026-06-08 16:37:15,017 INFO o.a.j.JMeter: Version 5.6.3
+2026-06-08 16:37:15,017 INFO o.a.j.JMeter: java.version=25.0.2
+2026-06-08 16:37:15,017 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2026-06-08 16:37:15,017 INFO o.a.j.JMeter: os.name=Windows 11
+2026-06-08 16:37:15,017 INFO o.a.j.JMeter: os.arch=amd64
+2026-06-08 16:37:15,017 INFO o.a.j.JMeter: os.version=10.0
+2026-06-08 16:37:15,017 INFO o.a.j.JMeter: file.encoding=UTF-8
+2026-06-08 16:37:15,017 INFO o.a.j.JMeter: java.awt.headless=null
+2026-06-08 16:37:15,017 INFO o.a.j.JMeter: Max memory     =1073741824
+2026-06-08 16:37:15,017 INFO o.a.j.JMeter: Available Processors =16
+2026-06-08 16:37:15,026 INFO o.a.j.JMeter: Default Locale=English (EN)
+2026-06-08 16:37:15,027 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2026-06-08 16:37:15,027 INFO o.a.j.JMeter: JMeterHome=C:\tools\apache-jmeter-5.6.3\apache-jmeter-5.6.3
+2026-06-08 16:37:15,027 INFO o.a.j.JMeter: user.dir  =C:\Projects\backend\cep-search-api\src\main\resources\performance
+2026-06-08 16:37:15,028 INFO o.a.j.JMeter: PWD       =C:\Projects\backend\cep-search-api\src\main\resources\performance
+2026-06-08 16:37:15,029 INFO o.a.j.JMeter: IP: 192.168.18.129 Name: Alienware FullName: Alienware
+2026-06-08 16:37:15,034 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2026-06-08 16:37:15,146 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2026-06-08 16:37:16,198 INFO o.a.j.JMeterGuiLauncher: Loading file: cep-search-api-test-nf.jmx
+2026-06-08 16:37:16,203 INFO o.a.j.s.FileServer: Default base='C:\Projects\backend\cep-search-api\src\main\resources\performance'
+2026-06-08 16:37:16,205 INFO o.a.j.s.FileServer: Set new base='C:\Projects\backend\cep-search-api\src\main\resources\performance'
+2026-06-08 16:37:16,390 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2026-06-08 16:37:16,402 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2026-06-08 16:37:16,403 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2026-06-08 16:37:16,405 INFO o.a.j.s.SaveService: Loading file: cep-search-api-test-nf.jmx
+2026-06-08 16:37:16,448 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-06-08 16:37:16,448 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-06-08 16:37:16,448 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-06-08 16:37:16,448 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-06-08 16:37:16,448 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2026-06-08 16:37:16,448 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2026-06-08 16:37:16,454 INFO o.a.j.s.FileServer: Set new base='C:\Projects\backend\cep-search-api\src\main\resources\performance'
+2026-06-08 16:37:16,467 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2026-06-08 16:37:16,467 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2026-06-08 16:37:16,468 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2026-06-08 16:37:16,468 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
