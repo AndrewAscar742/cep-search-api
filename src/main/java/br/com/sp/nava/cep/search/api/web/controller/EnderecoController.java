@@ -52,7 +52,7 @@ public class EnderecoController {
                     """
     )
 	@PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<Object> buscarPorCep(@RequestBody @Valid InputEnderecoDto enderecoDto) {
+	public ResponseEntity<Object> inserirEndereco(@RequestBody @Valid InputEnderecoDto enderecoDto) {
 		// valida se o cep já existe no banco
 		enderecoService.validarCepNaBase(enderecoDto.cep());
 		
